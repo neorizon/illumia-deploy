@@ -1,52 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Illumia</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy HTML Test Page</title>
     <style>
-      html, body {
-        margin: 0;
-        height: 100%;
-        overflow: hidden;
-        background: #1e1e1e;
-      }
-      /* winit appends the canvas to <body> itself; its ResizeObserver turns
-         this CSS size into the window's (physical-pixel) inner size. */
-      canvas {
-        display: block;
-        width: 100%;
-        height: 100%;
-        outline: none;
-        touch-action: none;
-      }
-      #no-webgpu {
-        display: none;
-        color: #ddd;
-        font: 16px sans-serif;
-        padding: 2em;
-      }
+        body { font-family: sans-serif; line-height: 1.6; margin: 40px; color: #333; }
+        hr { border: 0; border-top: 1px solid #ccc; margin: 20px 0; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        table, th, td { border: 1px solid #aaa; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
     </style>
-    
-<script type="module">
-import init, * as bindings from '/illumia-web-7cecec8288b23d29.js';
-const wasm = await init({ module_or_path: '/illumia-web-7cecec8288b23d29_bg.wasm' });
+</head>
+<body>
 
+    <!-- Typography & Headings -->
+    <header>
+        <h1>Main Heading 1 (h1)</h1>
+        <p>This is a sample paragraph featuring <strong>bold text</strong>, <em>italic text</em>, and a <a href="https://example.com" target="_blank">hyperlink to an external source</a>.</p>
+    </header>
+    <hr>
 
-window.wasmBindings = bindings;
+    <main>
+        <section>
+            <h2>Sub-heading 2 (h2)</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pre-formatted text looks like this:</p>
+            <code>console.log("Hello, World!");</code>
+        </section>
 
+        <!-- Lists -->
+        <section>
+            <h3>Lists (h3)</h3>
+            <h4>Unordered List:</h4>
+            <ul>
+                <li>First item in an unordered list</li>
+                <li>Second item with an inline <code>code</code> tag</li>
+                <li>Third list item</li>
+            </ul>
 
-dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+            <h4>Ordered List:</h4>
+            <ol>
+                <li>Step number one</li>
+                <li>Step number two</li>
+                <li>Step number three</li>
+            </ol>
+        </section>
+        <hr>
 
-</script>
-  <link rel="modulepreload" href="/illumia-web-7cecec8288b23d29.js" crossorigin="anonymous" integrity="sha384-eRrbYoFqAJFizffypFVugDG2/zj7i4ZTg82icMPXTI+sNGEOQ8cbiAuaBWgEvb7H"><link rel="modulepreload" href="/snippets/illumia-b890f23b8608ce70/src/storage/web.js" crossorigin="anonymous" integrity="sha384-gdjsVvHSlXC8jOBnmT3IERQiJTlV9R0lWXXXBL83wLSCXc27EJrd6pUs4g5dGYKC"><link rel="preload" href="/illumia-web-7cecec8288b23d29_bg.wasm" crossorigin="anonymous" integrity="sha384-AzQv6FFpzwncmyRic2W/CjDnSngqKvybFDjHH/NH6VsDrvS1T/EIY1wfYrQDyrdn" as="fetch" type="application/wasm"></head>
-  <body>
-    <div id="no-webgpu">
-      Illumia renders with WebGPU, which this browser doesn't support (or has
-      disabled). Try a recent Chrome, Edge, or Firefox.
-    </div>
-    <script>
-      if (!navigator.gpu) document.getElementById("no-webgpu").style.display = "block";
-    </script>
-  </body>
+        <!-- Images and Media -->
+        <section>
+            <h2>Media Elements</h2>
+            <figure>
+                <img src="https://placeholder.com" alt="Placeholder Image Example">
+                <figcaption>Figure caption: A standard 400x200 placeholder image.</figcaption>
+            </figure>
+        </section>
+        <hr>
+
+        <!-- Data Tables -->
+        <section>
+            <h2>Data Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product Name</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Alpha Widget</td>
+                        <td>In Stock</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Beta Component</td>
+                        <td>Out of Stock</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr>
+
+        <!-- Form Elements -->
+        <section>
+            <h2>Interactive Form</h2>
+            <form action="#" method="get">
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" placeholder="John Doe">
+                </div>
+                <br>
+                <div>
+                    <label for="choices">Choose an option:</label><br>
+                    <select id="choices" name="choices">
+                        <option value="opt1">Option 1</option>
+                        <option value="opt2">Option 2</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <button type="submit">Submit Button</button>
+                    <button type="button" disabled>Disabled Button</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+    <footer>
+        <p>&copy; 2026 Dummy HTML Sandbox File.</p>
+    </footer>
+
+</body>
 </html>
