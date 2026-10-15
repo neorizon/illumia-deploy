@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Illumia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #1e1e1e;
+      }
+      /* winit appends the canvas to <body> itself; its ResizeObserver turns
+         this CSS size into the window's (physical-pixel) inner size. */
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        touch-action: none;
+      }
+      #no-webgpu {
+        display: none;
+        color: #ddd;
+        font: 16px sans-serif;
+        padding: 2em;
+      }
+    </style>
+    
+<script type="module">
+import init, * as bindings from '/illumia-web-7cecec8288b23d29.js';
+const wasm = await init({ module_or_path: '/illumia-web-7cecec8288b23d29_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  <link rel="modulepreload" href="/illumia-web-7cecec8288b23d29.js" crossorigin="anonymous" integrity="sha384-eRrbYoFqAJFizffypFVugDG2/zj7i4ZTg82icMPXTI+sNGEOQ8cbiAuaBWgEvb7H"><link rel="modulepreload" href="/snippets/illumia-b890f23b8608ce70/src/storage/web.js" crossorigin="anonymous" integrity="sha384-gdjsVvHSlXC8jOBnmT3IERQiJTlV9R0lWXXXBL83wLSCXc27EJrd6pUs4g5dGYKC"><link rel="preload" href="/illumia-web-7cecec8288b23d29_bg.wasm" crossorigin="anonymous" integrity="sha384-AzQv6FFpzwncmyRic2W/CjDnSngqKvybFDjHH/NH6VsDrvS1T/EIY1wfYrQDyrdn" as="fetch" type="application/wasm"></head>
+  <body>
+    <div id="no-webgpu">
+      Illumia renders with WebGPU, which this browser doesn't support (or has
+      disabled). Try a recent Chrome, Edge, or Firefox.
+    </div>
+    <script>
+      if (!navigator.gpu) document.getElementById("no-webgpu").style.display = "block";
+    </script>
+  </body>
+</html>
