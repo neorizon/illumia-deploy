@@ -29,8 +29,8 @@
     </style>
     
 <script type="module">
-import init, * as bindings from '/illumia-web-d7de44998c01e251.js';
-const wasm = await init({ module_or_path: '/illumia-web-d7de44998c01e251_bg.wasm' });
+import init, * as bindings from '/illumia-web-778c69af0e0a5a9a.js';
+const wasm = await init({ module_or_path: '/illumia-web-778c69af0e0a5a9a_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -39,7 +39,7 @@ window.wasmBindings = bindings;
 dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
 </script>
-  <link rel="modulepreload" href="/illumia-web-d7de44998c01e251.js" crossorigin="anonymous" integrity="sha384-/pg6qnHNmHB4uLiYR+o+Zrwa8HSrUt8bm4otWf8KOKLMo6r7q1kT9xV5oAHLba5c"><link rel="modulepreload" href="/snippets/illumia-b890f23b8608ce70/src/storage/web.js" crossorigin="anonymous" integrity="sha384-K9YxODjMy42uPwfcufjErS5QOYjwf0oQlI2Ps+eqKTne8yOHW8UWSHwURMCewSIL"><link rel="preload" href="/illumia-web-d7de44998c01e251_bg.wasm" crossorigin="anonymous" integrity="sha384-JCF18MAXfp7Qyu1kG8Wp1eJWBjyC3OvQs6xZrY/l8M0nxEC6Vnc4/sw+0z1srpZu" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/illumia-web-778c69af0e0a5a9a.js" crossorigin="anonymous" integrity="sha384-cd/x5s1TXiPs/sZ48Ri5cgJJE7tBSaPMbGH5L0Q/uX6igX2j7OQIXPn9zAoT4/kj"><link rel="modulepreload" href="/snippets/illumia-b890f23b8608ce70/src/storage/web.js" crossorigin="anonymous" integrity="sha384-K9YxODjMy42uPwfcufjErS5QOYjwf0oQlI2Ps+eqKTne8yOHW8UWSHwURMCewSIL"><link rel="preload" href="/illumia-web-778c69af0e0a5a9a_bg.wasm" crossorigin="anonymous" integrity="sha384-i7ylm6hcp7Cx7sAdx1lftG31F+MDPJQ+9RlNSRXENNiLWT9YTQ9Jg9+uVuEP7WMI" as="fetch" type="application/wasm"></head>
   <body>
     <div id="no-webgpu">
       Illumia renders with WebGPU, which this browser doesn't support (or has
