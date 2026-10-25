@@ -29,8 +29,8 @@
     </style>
     
 <script type="module">
-import init, * as bindings from '/illumia-web-8b7242f3362d83da.js';
-const wasm = await init({ module_or_path: '/illumia-web-8b7242f3362d83da_bg.wasm' });
+import init, * as bindings from '/illumia-web-9ed6a434093791d7.js';
+const wasm = await init({ module_or_path: '/illumia-web-9ed6a434093791d7_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -39,7 +39,23 @@ window.wasmBindings = bindings;
 dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
 </script>
-  <link rel="modulepreload" href="/illumia-web-8b7242f3362d83da.js" crossorigin="anonymous" integrity="sha384-8yIY8/7mpJTCm5fc6YkI37bhBviCi1RIpMSJcTFU5L7qcrLjKpTnkH7TWa/47myZ"><link rel="modulepreload" href="/snippets/illumia-b890f23b8608ce70/src/storage/web.js" crossorigin="anonymous" integrity="sha384-K9YxODjMy42uPwfcufjErS5QOYjwf0oQlI2Ps+eqKTne8yOHW8UWSHwURMCewSIL"><link rel="preload" href="/illumia-web-8b7242f3362d83da_bg.wasm" crossorigin="anonymous" integrity="sha384-7yn2RNXygojjy+DrfQ02K0HpmOrBDNfh4OJhO2udK1u1I3cIM3l5P041is+++J0b" as="fetch" type="application/wasm"></head>
+    <!-- The fonts text shapes with (`imaging::fonts`), served as files rather
+         than compiled into the wasm. Preloaded so they download alongside
+         it instead of after it; the app fetches them again before starting,
+         which the preloads answer. -->
+    
+    <link rel="preload" href="fonts/NotoSans-Regular.ttf" as="fetch" crossorigin />
+    <link rel="preload" href="fonts/NotoSans-Bold.ttf" as="fetch" crossorigin />
+    <link rel="preload" href="fonts/NotoSans-Italic.ttf" as="fetch" crossorigin />
+    <link rel="preload" href="fonts/NotoSans-BoldItalic.ttf" as="fetch" crossorigin />
+    <link rel="preload" href="fonts/NotoSerif-Regular.ttf" as="fetch" crossorigin />
+    <link rel="preload" href="fonts/NotoSerif-Bold.ttf" as="fetch" crossorigin />
+    <link rel="preload" href="fonts/NotoSerif-Italic.ttf" as="fetch" crossorigin />
+    <link rel="preload" href="fonts/NotoSerif-BoldItalic.ttf" as="fetch" crossorigin />
+    <link rel="preload" href="fonts/NotoSansMono-Regular.ttf" as="fetch" crossorigin />
+    <link rel="preload" href="fonts/NotoSansSymbols2-Regular.ttf" as="fetch" crossorigin />
+    <link rel="preload" href="fonts/NotoSansMath-Regular.ttf" as="fetch" crossorigin />
+  <link rel="modulepreload" href="/illumia-web-9ed6a434093791d7.js" crossorigin="anonymous" integrity="sha384-72ZeLb2bARVYjmZf83bWzSNQ51Mlg+pNO3lJeRVwa44obHhOTH2UArZN/88HQVb4"><link rel="modulepreload" href="/snippets/illumia-b890f23b8608ce70/src/storage/web.js" crossorigin="anonymous" integrity="sha384-K9YxODjMy42uPwfcufjErS5QOYjwf0oQlI2Ps+eqKTne8yOHW8UWSHwURMCewSIL"><link rel="preload" href="/illumia-web-9ed6a434093791d7_bg.wasm" crossorigin="anonymous" integrity="sha384-rMx6cAibCOIRH94HdKi+fAQJ1G6ndcSBUADnpy1O+JxVKdg0UAIFhcFoZPlKleRM" as="fetch" type="application/wasm"></head>
   <body>
     <div id="no-webgpu">
       Illumia renders with WebGPU, which this browser doesn't support (or has
