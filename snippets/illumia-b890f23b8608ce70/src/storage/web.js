@@ -187,6 +187,19 @@ export async function illumia_save(key, suggestedName, text) {
   return { name: handle.name, key };
 }
 
+/// Writes `text` to the file stored under `key` if writing to it is already
+/// allowed — never asking, since an auto-save runs off a timer, not a click.
+/// Resolves to whether it wrote.
+export async function illumia_auto_save(key, text) {
+  const handle = await getHandle(key);
+  if (!handle) throw new Error("The file is no longer available.");
+  if ((await handle.queryPermission({ mode: "readwrite" })) !== "granted") return false;
+  const writable = await handle.createWritable();
+  await writable.write(text);
+  await writable.close();
+  return true;
+}
+
 function download(name, text, type = "application/json") {
   const url = URL.createObjectURL(new Blob([text], { type }));
   const link = document.createElement("a");

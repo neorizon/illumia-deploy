@@ -1,4 +1,4 @@
-import { illumia_export, illumia_forget_handles_except, illumia_open_file, illumia_open_key, illumia_pick_images, illumia_save } from './snippets/illumia-b890f23b8608ce70/src/storage/web.js';
+import { illumia_auto_save, illumia_export, illumia_forget_handles_except, illumia_open_file, illumia_open_key, illumia_pick_images, illumia_save } from './snippets/illumia-b890f23b8608ce70/src/storage/web.js';
 
 function __wbg_get_imports() {
     const import0 = {
@@ -14,6 +14,11 @@ function __wbg_get_imports() {
         __wbg_WorkerGlobalScope_d1b9459d53a39f3d: function(arg0) {
             const ret = arg0.WorkerGlobalScope;
             return ret;
+        },
+        __wbg___wbindgen_boolean_get_c9c83ebd41b34df3: function(arg0) {
+            const v = arg0;
+            const ret = typeof(v) === 'boolean' ? v : undefined;
+            return isLikeNone(ret) ? 0xFFFFFF : ret ? 1 : 0;
         },
         __wbg___wbindgen_debug_string_a57024b9c6e4a48b: function(arg0, arg1) {
             const ret = debugString(arg1);
@@ -455,6 +460,23 @@ function __wbg_get_imports() {
         __wbg_history_8941dec1bcca1cc5: function() { return handleError(function (arg0) {
             const ret = arg0.history;
             return ret;
+        }, arguments); },
+        __wbg_illumia_auto_save_9dba10ed18afbd85: function() { return handleError(function (arg0, arg1, arg2, arg3) {
+            let deferred0_0;
+            let deferred0_1;
+            let deferred1_0;
+            let deferred1_1;
+            try {
+                deferred0_0 = arg0;
+                deferred0_1 = arg1;
+                deferred1_0 = arg2;
+                deferred1_1 = arg3;
+                const ret = illumia_auto_save(getStringFromWasm0(arg0, arg1), getStringFromWasm0(arg2, arg3));
+                return ret;
+            } finally {
+                wasm.__wbindgen_free(deferred0_0, deferred0_1, 1);
+                wasm.__wbindgen_free(deferred1_0, deferred1_1, 1);
+            }
         }, arguments); },
         __wbg_illumia_export_9746af0fc8f2f218: function() { return handleError(function (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) {
             let deferred0_0;
