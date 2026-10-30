@@ -6,7 +6,8 @@
 
 const DB_NAME = "illumia";
 const STORE = "file-handles";
-const TYPES = [{ description: "Illumia scene", accept: { "application/json": [".json"] } }];
+// `.json` is what scenes were saved as before `.ila`, so they still open.
+const TYPES = [{ description: "Illumia scene", accept: { "application/json": [".ila", ".json"] } }];
 
 /// This session's handles by key — saves an IndexedDB round trip, and still
 /// works if IndexedDB is unavailable (private browsing).
@@ -98,7 +99,7 @@ function openWithInput() {
   return new Promise((resolve, reject) => {
     const input = document.createElement("input");
     input.type = "file";
-    input.accept = ".json,application/json";
+    input.accept = ".ila,.json,application/json";
     input.addEventListener("change", async () => {
       const file = input.files && input.files[0];
       if (!file) return resolve(null);
