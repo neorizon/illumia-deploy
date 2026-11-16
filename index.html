@@ -29,8 +29,8 @@
     </style>
     
 <script type="module">
-import init, * as bindings from '/illumia-web-6d103f5bd93fde02.js';
-const wasm = await init({ module_or_path: '/illumia-web-6d103f5bd93fde02_bg.wasm' });
+import init, * as bindings from '/illumia-web-aa3f25a3c5ca0a26.js';
+const wasm = await init({ module_or_path: '/illumia-web-aa3f25a3c5ca0a26_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -55,7 +55,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <link rel="preload" href="fonts/NotoSansMono-Regular.ttf" as="fetch" crossorigin />
     <link rel="preload" href="fonts/NotoSansSymbols2-Regular.ttf" as="fetch" crossorigin />
     <link rel="preload" href="fonts/NotoSansMath-Regular.ttf" as="fetch" crossorigin />
-  <link rel="modulepreload" href="/illumia-web-6d103f5bd93fde02.js" crossorigin="anonymous" integrity="sha384-hb9cmnD8LwB6ptQuIcecW7dggX3YZSRMt+unTQONuv0oI4NBjGaqJy2xbUymddmG"><link rel="modulepreload" href="/snippets/illumia-b890f23b8608ce70/src/storage/web.js" crossorigin="anonymous" integrity="sha384-D9XS3WvJNuqaf8qwxdconQdNe7ffZggeeo02ZW4TQRDuFIY+7th03SfF8pFsjseh"><link rel="preload" href="/illumia-web-6d103f5bd93fde02_bg.wasm" crossorigin="anonymous" integrity="sha384-L38YpbTlFQ5/AmYWQpIT8+f/2GvvsGU2zff08Q7c32F5bstbET0JOuYwThETQ3XN" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/illumia-web-aa3f25a3c5ca0a26.js" crossorigin="anonymous" integrity="sha384-EN6pII+mvURNAn5tK4/BRW9aXofBHYYxReT5qE3qEiHjHxdn34y/Z0U+4a253iQi"><link rel="modulepreload" href="/snippets/illumia-b890f23b8608ce70/src/storage/web.js" crossorigin="anonymous" integrity="sha384-D9XS3WvJNuqaf8qwxdconQdNe7ffZggeeo02ZW4TQRDuFIY+7th03SfF8pFsjseh"><link rel="preload" href="/illumia-web-aa3f25a3c5ca0a26_bg.wasm" crossorigin="anonymous" integrity="sha384-Z5jEfteoawMR9oTKYsVtQN7bcFAZORqSbj+vXn2KFRKWD17NnaYxYoHZltRcY0Bm" as="fetch" type="application/wasm"></head>
   <body>
     <div id="no-webgpu">
       Illumia renders with WebGPU, which this browser doesn't support (or has
