@@ -29,8 +29,8 @@
     </style>
     
 <script type="module">
-import init, * as bindings from '/illumia-web-2e221ccae064e18f.js';
-const wasm = await init({ module_or_path: '/illumia-web-2e221ccae064e18f_bg.wasm' });
+import init, * as bindings from '/illumia-web-c76520319592417.js';
+const wasm = await init({ module_or_path: '/illumia-web-c76520319592417_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -55,7 +55,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <link rel="preload" href="fonts/NotoSansMono-Regular.ttf" as="fetch" crossorigin />
     <link rel="preload" href="fonts/NotoSansSymbols2-Regular.ttf" as="fetch" crossorigin />
     <link rel="preload" href="fonts/NotoSansMath-Regular.ttf" as="fetch" crossorigin />
-  <link rel="modulepreload" href="/illumia-web-2e221ccae064e18f.js" crossorigin="anonymous" integrity="sha384-5eMoAzb+2NSB6PeyRnOc/oT5mEXj5zD9cs8IMFVt54iyVVvg4beXjO5CjtySJIld"><link rel="modulepreload" href="/snippets/illumia-b890f23b8608ce70/src/storage/web.js" crossorigin="anonymous" integrity="sha384-D9XS3WvJNuqaf8qwxdconQdNe7ffZggeeo02ZW4TQRDuFIY+7th03SfF8pFsjseh"><link rel="preload" href="/illumia-web-2e221ccae064e18f_bg.wasm" crossorigin="anonymous" integrity="sha384-Kzq0ELIYBz6AkVr/mSM3fkCzN/pCH/LeBeTMBtyUDWJiyPlC6EDMZQvJU2b/1JWC" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/illumia-web-c76520319592417.js" crossorigin="anonymous" integrity="sha384-sHv+i8mze06QB76zimbZJZLiT3/zWhedsJI+gtvjAfWn2oBfk07ilbqwFXZzot7M"><link rel="modulepreload" href="/snippets/illumia-b890f23b8608ce70/src/storage/web.js" crossorigin="anonymous" integrity="sha384-D9XS3WvJNuqaf8qwxdconQdNe7ffZggeeo02ZW4TQRDuFIY+7th03SfF8pFsjseh"><link rel="preload" href="/illumia-web-c76520319592417_bg.wasm" crossorigin="anonymous" integrity="sha384-PEjf8ufXOxAm4fzsrS6BMAslkcExgzDUKebwfEh1A772l/xi+MdxxfuSjEXRbD7h" as="fetch" type="application/wasm"></head>
   <body>
     <div id="no-webgpu">
       Illumia renders with WebGPU, which this browser doesn't support (or has
