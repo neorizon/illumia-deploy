@@ -31,8 +31,8 @@
     <link rel="icon" href="/favicon-abda67115393edfc.svg" integrity="sha384-ZGzeTOQs3wcOQN0dKMFJzRUeuSVyV8ZqQvQRy6Oic9Z01LpcmL+l693XHJwxJk0m"/>
     
 <script type="module">
-import init, * as bindings from '/illumia-web-2ea019eb78f33d17.js';
-const wasm = await init({ module_or_path: '/illumia-web-2ea019eb78f33d17_bg.wasm' });
+import init, * as bindings from '/illumia-web-645c160965ab8f40.js';
+const wasm = await init({ module_or_path: '/illumia-web-645c160965ab8f40_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -57,7 +57,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <link rel="preload" href="fonts/NotoSansMono-Regular.ttf" as="fetch" crossorigin />
     <link rel="preload" href="fonts/NotoSansSymbols2-Regular.ttf" as="fetch" crossorigin />
     <link rel="preload" href="fonts/NotoSansMath-Regular.ttf" as="fetch" crossorigin />
-  <link rel="modulepreload" href="/illumia-web-2ea019eb78f33d17.js" crossorigin="anonymous" integrity="sha384-mmQJdAcJ3Zp564KsAH/zT6itUCwS3n8Akp9Lg7G3qWVeDwoMPIzELcei0OsLVHLB"><link rel="modulepreload" href="/snippets/illumia-b890f23b8608ce70/src/storage/web.js" crossorigin="anonymous" integrity="sha384-D9XS3WvJNuqaf8qwxdconQdNe7ffZggeeo02ZW4TQRDuFIY+7th03SfF8pFsjseh"><link rel="preload" href="/illumia-web-2ea019eb78f33d17_bg.wasm" crossorigin="anonymous" integrity="sha384-OY4lAZyK23itvPemPxm8S/wYnB5iYL6YyuTDOHgx7wBnm1Gs89+rLm70HpRm25Ni" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/illumia-web-645c160965ab8f40.js" crossorigin="anonymous" integrity="sha384-lcfRgFWPbZ9bCFcXFrPO7K3dYX8SCa8Dt5BTGpenWDGyVAYejpZh83FRDEy5hQtF"><link rel="modulepreload" href="/snippets/illumia-b890f23b8608ce70/src/storage/web.js" crossorigin="anonymous" integrity="sha384-D9XS3WvJNuqaf8qwxdconQdNe7ffZggeeo02ZW4TQRDuFIY+7th03SfF8pFsjseh"><link rel="preload" href="/illumia-web-645c160965ab8f40_bg.wasm" crossorigin="anonymous" integrity="sha384-qAn2AMv7gZu0QDyZYnpjRHnD7TwM5LaeNGKdm+watoWsyXHTnx3tcx9gYUjs0WSC" as="fetch" type="application/wasm"></head>
   <body>
     <div id="no-webgpu">
       Illumia renders with WebGPU, which this browser doesn't support (or has
